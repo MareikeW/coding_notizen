@@ -1,0 +1,89 @@
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+
+html, body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;	
+}
+
+.container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+      background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+      background-color: #ffcc5c;
+}
+
+/*===== Layout mit Header, Footer, Menü und Content ======*/
+.container {
+    display: grid;
+    grid-gap: 3px;
+    /* es gibt responsive 12 Spalten à 1 fraction */
+    grid-template-columns: repeat(12, 1fr);
+    /* es gibt drei Zeilen */
+    grid-template-rows: 40px 200px 40px;
+}
+
+.header {
+    /* Header spannt von der zweiten Spalte bis zum Ende des Grids */
+    grid-column: 2 / -1;
+}
+
+.menu {
+  /* Menu spannt vom Anfang über zwei Zeilen  */
+    grid-row: 1 / 3;
+}
+
+.content {
+  /* Content beginnt bei der zweiten Spalte und geht bis zum Ende des Grids */
+    grid-column: 2 / -1;
+}
+
+.footer {
+  /* Footer spannt über alle Spalten des Grids */
+    grid-column: 1 / -1;
+}
+
+
+/*===== Grid-Area =====*/
+/* gleiches Beispiel nur mit grid-area */
+.container {
+  height: 100%;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px 200px 40px;
+  grid-template-areas: 
+      "m h h h h h h h h h h h"
+      "m c c c c c c c c c c c"
+      "f f f f f f f f f f f f";
+}
+
+.header {
+  grid-area: h;
+}
+
+.menu {
+  grid-area: m;
+}
+
+.content {
+  grid-area: c;
+}
+
+.footer {
+  grid-area: f;
+}
