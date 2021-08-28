@@ -1,11 +1,98 @@
-/* position-items */
+.container > div {
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+  
+html, body {
+    background-color: #ffeead;
+    margin: 10px;
+    height: 100%;
+}
+  
+.container > div:nth-child(1) {
+    background-color: #96ceb4;	
+}
+  
+.container > div:nth-child(2) {
+    background-color: #ff6f69;
+}
+  
+.container > div:nth-child(3) {
+    background-color: #88d8b0;
+}
+  
+.container > div:nth-child(4) {
+    background-color: #ff6f69;
+}
+
+/*===== position-items =====*/
 .container {
     border: 5px solid #ffcc5c;
     display: flex;
     justify-content: flex-end;
 }
 
-/* schiebt "Home" ganz nach link im Container */
+/* schiebt "Home" ganz nach links im Container */
 .home {
     margin-right: auto;
+}
+
+
+/*===== flex property =====*/
+.container {
+    border: 5px solid #ffcc5c;
+    display: flex;
+  }
+  /* teilt alle Kind-divs gleichmäßig im Container auf */
+.container > div {
+    flex: 1;
+    
+    /*flex: flex-grow, flex-shrink, flex-basis */
+}
+  /* macht "Search" doppelt so breit wie die restlichen divs */
+.container > .search {
+    flex: 2;
+}
+
+
+/*===== align items =====*/
+.container {
+    border: 5px solid #ffcc5c;
+    display: flex;
+    height: 100%; /* + oben in body height: 100%; */
+    align-items: center;
+}
+  
+.container > div {
+    flex: 1;
+}
+
+/* positioniert "Logout" nach ganz oben im Container */
+.logout {
+    align-self: flex-start;
+}
+/* positioniert "Home" nach ganz unten im Container */
+.home {
+    align-self: flex-end;
+}
+  
+
+/* verändert die Anordnung der einzelnen Elemente im Container */
+.container {
+    border: 5px solid #ffcc5c;
+    display: flex;
+}
+  
+.item1 {
+    order: 1;
+}
+  
+.item2 {
+    order: 0;
+}
+  
+.item3 {
+    order: -1;
 }
