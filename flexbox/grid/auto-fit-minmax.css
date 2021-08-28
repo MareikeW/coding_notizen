@@ -1,0 +1,39 @@
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+
+html, body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;	
+}
+
+.container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+      background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+      background-color: #ffcc5c;
+}
+
+/*===== auto-fit & minmax =====*/
+.container {
+    display: grid;
+    grid-gap: 5px;
+    /* ähnlich wie flex-wrap; eine Spalte soll minimal 100px und maximal 1fraction betragen;
+    außerdem soll es responsive sein (auto-fit) */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* Zeilen à 100px werden implizit erstellt, d. h. neu automatisch erstellt bzw. weggenommen */
+    grid-auto-rows: 100px;
+}
