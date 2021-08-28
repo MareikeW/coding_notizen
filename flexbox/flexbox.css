@@ -1,0 +1,11 @@
+/* position-items */
+.container {
+    border: 5px solid #ffcc5c;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* schiebt "Home" ganz nach link im Container */
+.home {
+    margin-right: auto;
+}
