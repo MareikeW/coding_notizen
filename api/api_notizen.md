@@ -57,3 +57,12 @@ fetch("https://apis.scrimba.com/jsonplaceholder/todos", {
     .then(data => console.log(data))
 
 
+
+REST: REpresentation State Transfer
+        --> REST ist ein design pattern, um einen standardisierten Weg für die Kommunikation zwischen Clients und Servern vorzugeben. / Ein standardisierter Weg, wie man von einem Computer (Client) Daten von einem Server anfordern
+        oder an ihn schicken kann.
+        --> Prinzipien von REST:
+            1. Trennung von Client und Server: Wenn der Client nur JSON-Daten anfragt, bekommt er auch nur diese und nicht eine fertige Webseite. Der Client kann aus diesen Daten selbst etwas bauen. Der Server ist nur dafür zuständig,
+            die Daten im richtigen Format zu liefern.
+            2. Zustandslosigkeit: Wenn der Client einen Request macht, speichert der Server keine Informationen über diesen Request.
+            3. Zugriff auf Ressourcen: standardisierte URL Endpunkte. /todos oder /todos/:id (z. B. /todos/1)
